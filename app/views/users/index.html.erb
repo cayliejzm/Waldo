@@ -1,0 +1,9 @@
+<div class="SmallHeading">Users</div>
+
+<% @users.each do |u| %>
+  <ul>
+    <li>Username: <%= u.name %></li>
+    <li>Email: <%= u.email %></li>
+    <li>Image: <%= u.image %> </li>
+  </ul>
+<% end %>

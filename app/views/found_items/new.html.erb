@@ -1,0 +1,22 @@
+<div class="SmallHeading">Create New Found Item</div>
+
+<%= form_for @found_item do |f| %>
+
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name, :required => true %>
+</p>
+<p>
+  <%= f.label :description %>
+  <%= f.text_field :description, :required => true %>
+</p>
+<p>
+  <%= f.label :image %>
+  <%= f.text_field :image, :required => true %>
+</p>
+
+<!-- Add label for time and location -->
+
+
+<%= f.submit "Submit Item Found" %>
+<% end %>

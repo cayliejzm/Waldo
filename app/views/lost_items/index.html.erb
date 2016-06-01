@@ -1,0 +1,18 @@
+<div class="SmallHeading">List of Lost Items in Your Area</div>
+
+<% @lost_items.each do |l| %>
+  <ul>
+    <li>Name: <%=link_to l.name, lost_item_path(l)%></li>
+    <li>Description: <%=l.description%></li>
+    <li><img src= <%=l.image %>class= "thumbnail"></li>
+    <!-- <li>Location Lost: =#l.longitude, l.latitude /li> -->
+  </ul>
+<% end %>
+
+
+<p>
+<%= link_to "Add Item Lost", new_lost_item_path%>
+</p>
+
+
+      

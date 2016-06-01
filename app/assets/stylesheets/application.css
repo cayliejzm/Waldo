@@ -1,0 +1,152 @@
+@font-face {
+  url: ('https://fonts.googleapis.com/css?family=Raleway')
+}
+
+
+header {
+  font-family: "railway", sans-serif;
+  font-size: 40px;
+  color; white;
+  width:100%;
+  height:50px;
+  background-color; black;
+  margin: 0 auto 20px;
+  position:relative;
+  padding:20px 0 0;
+  border-bottom:10px solid black;/*not visable in viewer*/
+}
+
+.TopNav {
+  float:left;
+  display:inline-block;
+  font-size:13px;
+  padding: 21px 0 0;
+  letter-spacing: 3px;
+  color: white;
+  font-family: 'railway', sans-serif;
+  text-transform: uppercase;
+
+}
+
+h1{
+ font-family: "railway", sans-serif;
+ font-weight: lighter; 300;
+ text-align: center;
+ padding-top: 65px;
+ margin-left: 20px;
+ font-size: 30px;
+ letter-spacing: 5px;
+}
+
+ h2, h3 {
+  font-family: "railway", sans-serif;
+  font-weight: light;
+  letter-spacing: 2.5px;
+  margin-left: 0px;
+  /*text-align: center;*/
+  font-size: 15px;
+}
+
+div {
+  margin-left: 20px
+  font-family: "railways", sans-serif;
+  font-weight: light 300;
+  /*text-align: center;*/
+  font-size: 15px;
+  /*display: inline-block;*/
+}
+
+#main {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+}
+#column1    {
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  float: left;
+}
+
+#column2  {
+  width: 400px;
+  height: 400px;
+  margin: auto;
+}
+
+
+
+p {
+  font-family: "railway", sans-serif;
+  font-weight: light 300;
+  font-size: 15px;
+}
+
+ul {
+  font-family: "railway", sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+li {
+  font-family: "railway", sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+
+ul.TopNav {
+  font-family: "railway", sans-serif;
+  font-weight: light 300;
+  /*text-align: center;*/
+  font-size: 10px;
+  margin-left: 20px;
+  list-style: none;
+  display: inline-block;
+}
+
+li.TopNav {
+  font-family: "railway", sans-serif;
+  font-weight: light 300;
+  text-align: center;
+  font-size: 10px;
+  margin-left: 65px;
+  display: inline-block;
+}
+
+.Profile {
+  align-items: center;
+  text-align: center;
+  font-family: "railway", sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+div {
+
+  font-family:  "railway", sans-serif;
+  font-weight: lighter; 300;
+  /*text-align: center;*/
+  font-size: 15px
+
+}
+
+div.SmallHeading {
+  font-family: "railway", sans-serif;
+  font-weight: normal;
+  letter-spacing: 5px;
+  text-align: center;
+  font-size: 25px;
+  padding: 70px;
+  padding-bottom: 0px;
+}
+
+
+.thumbnail {
+  max-width: 200px;
+}
+
+.featured {
+  max-width: 80%;
+}

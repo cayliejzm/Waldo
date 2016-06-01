@@ -1,0 +1,42 @@
+<div class="SmallHeading">Edit <%= @found_item.name %></div>
+
+<%= form_for @found_item, :url => '/found_item/#{@found_item.id}' do |f| %>
+
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name, :required => true %>
+</p>
+<p>
+  <%= f.label :description %>
+  <%= f.text_field :description, :required => true %>
+</p>
+<p>
+  <%= f.label :time_date_found %>
+  <%= f.text_field :time_date_found, :required => true %>
+</p>
+<p>
+  <%= f.label :image %>
+  <%= f.url_field :image, :required => true %>
+  <!-- above will eventually become cloudinary -->
+</p>
+
+<%= f.submit %>
+
+<% end %>
+
+<!--
+class CreateFoundItems < ActiveRecord::Migration
+  def change
+    create_table :found_items do |t|
+      t.text :name
+      t.text :description
+      t.text :image
+      t.text :time_date_lost
+      t.float :longitude
+      t.float :latitude
+
+
+      t.timestamps null: false
+    end
+  end
+end -->

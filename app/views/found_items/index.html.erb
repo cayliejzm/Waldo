@@ -1,0 +1,14 @@
+<div class="SmallHeading">List of items found in your area</div>
+
+<% @found_items.each do |f| %>
+  <ul>
+    <li>Name: <%= link_to f.name, found_item_path(f) %></li>
+    <li>Description: <%=f.description%></li>
+    <li><img src= <%=f.image %>class= "thumbnail"></li>
+  </ul>
+  <br>
+<% end %>
+
+<p>
+<%= link_to "Add Item Found", new_found_item_path%>
+</p>

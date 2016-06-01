@@ -1,0 +1,40 @@
+<h2>Create New Lost Item</h2>
+
+<%= form_for @lost_item do |f| %>
+
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name, :required => true %>
+</p>
+<p>
+  <%= f.label :description %>
+  <%= f.text_field :description, :required => true %>
+</p>
+<p>
+  <%= f.label :image %>
+  <%= f.text_field :image, :required => true %>
+</p>
+
+<!-- Add time and location lost -->
+
+
+
+
+<%= f.submit "Lodge Lost Item" %>
+<% end %>
+
+
+<!-- class CreateLostItems < ActiveRecord::Migration
+  def change
+    create_table :lost_items do |t|
+      t.text :name
+      t.text :description
+      t.text :image
+      t.text :time_date_lost
+      t.float :latitude
+      t.float :longitude
+
+      t.timestamps null: false
+    end
+  end
+end -->
