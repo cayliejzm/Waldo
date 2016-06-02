@@ -1,6 +1,6 @@
-<div class="SmallHeading">Edit <%= @found_item.name %></div>
+<div class="SmallHeading"> Edit Item </div>
 
-<%= form_for @found_item, :url => '/found_item/#{@found_item.id}' do |f| %>
+<%= form_for @found_item do |f| %>
 
 <p>
   <%= f.label :name %>
@@ -10,10 +10,7 @@
   <%= f.label :description %>
   <%= f.text_field :description, :required => true %>
 </p>
-<p>
-  <%= f.label :time_date_found %>
-  <%= f.text_field :time_date_found, :required => true %>
-</p>
+
 <p>
   <%= f.label :image %>
   <%= f.url_field :image, :required => true %>

@@ -20,6 +20,7 @@ class UsersController < ApplicationController
 
   def show
     @user = @current_user
+    # @user.found_items
     # @user = User.find params[:id]
   end
 
@@ -35,14 +36,14 @@ class UsersController < ApplicationController
     # @current_user.update user_params
     # redirect_to users_path
   end
-#
-# private
-#   def user_params
-#     params.require(:user).permit(:email, :password, :password_confirmation, :image)
-#   end
-# def authorise
-#   flash[:error] = "You need to be logged in for that!" unless @current_user.present?
-#   redirect_to root_path
-# end
+
+private
+  def user_params
+    params.require(:user).permit(:email, :password, :password_confirmation, :image)
+  end
+def authorise
+  flash[:error] = "You need to be logged in for that!" unless @current_user.present?
+  redirect_to root_path
+end
 
 end

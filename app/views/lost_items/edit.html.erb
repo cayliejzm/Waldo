@@ -1,6 +1,6 @@
-<h2>Edit <%= @lost_item.name %></h2>
+<div class="SmallHeading">Edit <%= @lost_item.name %></div>
 
-<%= form_for @lost_item, :url => '/lost_item/#{@lost_item.id}' do |f| %>
+<%= form_for @lost_item do |f| %>
 
 <p>
   <%= f.label :name %>
@@ -9,10 +9,6 @@
 <p>
   <%= f.label :description %>
   <%= f.text_field :description, :required => true %>
-</p>
-<p>
-  <%= f.label :time_date_lost %>
-  <%= f.text_field :time_date_lost, :required => true %>
 </p>
 <p>
   <%= f.label :image %>

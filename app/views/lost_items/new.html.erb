@@ -1,6 +1,6 @@
 <h2>Create New Lost Item</h2>
 
-<%= form_for @lost_item do |f| %>
+<%= form_for @lost_item, :html => { :multipart => true} do |f| %>
 
 <p>
   <%= f.label :name %>

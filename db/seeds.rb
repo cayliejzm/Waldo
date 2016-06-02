@@ -20,39 +20,6 @@ Hat = LostItem.create :name => 'Baseball Hat', :description => 'NY Yankee Baseba
 Dog = LostItem.create :name => 'Buddy', :description => 'Yellow Lab with white spot above his tail-constant cheeky grin', :time_date_lost => 'May 27th, n/a', :image => 'https://s-media-cache-ak0.pinimg.com/736x/88/8d/f6/888df61c94679b1237067ce986190c62.jpg'
 
 
+@current_user.lostitems << lost_item params[:id]
 
-
-
-
-
-# create_table "found_items", force: :cascade do |t|
-#   t.text     "name"
-#   t.text     "description"
-#   t.text     "image"
-#   t.text     "time_date_lost"
-#   t.float    "longitude"
-#   t.float    "latitude"
-#   t.datetime "created_at",     null: false
-#   t.datetime "updated_at",     null: false
-# end
-#
-# create_table "lost_items", force: :cascade do |t|
-#   t.text     "name"
-#   t.text     "description"
-#   t.text     "image"
-#   t.text     "time_date_lost"
-#   t.float    "latitude"
-#   t.float    "longitude"
-#   t.datetime "created_at",     null: false
-#   t.datetime "updated_at",     null: false
-# end
-#
-# create_table "users", force: :cascade do |t|
-#   t.text     "email"
-#   t.text     "password_digest"
-#   t.boolean  "admin",           default: false
-#   t.text     "image"
-#   t.datetime "created_at",                      null: false
-#   t.datetime "updated_at",                      null: false
-#   t.text     "name"
-# end
+@current_user.found_items << found_item params[:id]

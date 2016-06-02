@@ -8,18 +8,23 @@ class FoundItemsController < ApplicationController
   end
 
   def create
-    found_item = FoundItem.create found_item_params
+    @found_item = FoundItem.new
+
+    cloudinary = Cloudinary::Uploader.upload( params[:file] )
+    @found_item.image = cloudinary["url"]
+    @found_item.save
+
+    @current_user.found_items << @found_item
 
     redirect_to "/found_item/#{found_item.id}"
   end
 
   def show
       @found_item = FoundItem.find params[:id]
-
   end
 
   def edit
-    @found_item = @current_found_item
+    @found_item = FoundItem.find params[:id]
   end
 
   def update
