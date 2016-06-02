@@ -36,7 +36,7 @@ class FoundItemsController < ApplicationController
 
 private
   def found_item_params
-    params.require(:found_item).permit(:name, :description, :image, :time_and_date_found, :longitude, :latitude)
+    params.require(:found_item).permit(:name, :description, :image, :time_and_date_found, :longitude, :latitude, :address)
   end
   def authorise
     unless @current_user.present?

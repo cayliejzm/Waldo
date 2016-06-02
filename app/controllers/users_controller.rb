@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find params[:id]
-  
+
   end
 
   def edit
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
 
 private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :image)
+    params.require(:user).permit(:email, :password, :password_confirmation, :image, :address)
   end
 def authorise
   flash[:error] = "You need to be logged in for that!" unless @current_user.present?

@@ -39,7 +39,7 @@ class LostItemsController < ApplicationController
 
   private
   def lost_item_params
-    params.require(:lost_item).permit(:name, :description, :image, :time_and_date_lost, :longitude, :latitude )
+    params.require(:lost_item).permit(:name, :description, :image, :time_and_date_lost, :longitude, :latitude, :address )
   end
   def authorise
     p "We are authorising zxcvbnmkloiuytre456yujkoiuytfd"
