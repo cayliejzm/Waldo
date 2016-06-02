@@ -1,8 +1,13 @@
 class LostItemsController < ApplicationController
-  before_action :authorise, :only => [:new, :edit, :update, :create, :destroy]
+  before_action :authorise, :only => [:new, :create]
+  before_action :authorise_owner, :only => [:edit, :update, :destroy]
 
   def index
-    @lost_items = LostItem.all
+    if @current_user.present?
+      @lost_items = LostItem.all.near(@current_user.address, 20, :units => :km)
+    else
+      @lost_items = LostItem.all
+    end
   end
 
   def new
@@ -37,16 +42,25 @@ class LostItemsController < ApplicationController
     redirect_to lost_item_path( lost_item.id )
   end
 
+  def destroy
+    @lost_item.destroy
+  end
+
   private
   def lost_item_params
     params.require(:lost_item).permit(:name, :description, :image, :time_and_date_lost, :longitude, :latitude, :address )
   end
   def authorise
-    p "We are authorising zxcvbnmkloiuytre456yujkoiuytfd"
     unless @current_user.present?
       flash[:error] = "You need to be logged in for that!"
       redirect_to root_path
     end
   end
-
+  def authorise_owner
+    @lost_item = LostItem.find params[:id]
+    unless @current_user.present? and @current_user.id == @found_item.user_id
+      flash[:error] = "You CAN NOT do that!"
+      redirect_to root_path
+    end
+  end
 end

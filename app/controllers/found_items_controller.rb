@@ -1,9 +1,15 @@
 class FoundItemsController < ApplicationController
 
-  before_action :authorise, :only => [:new, :edit, :update, :create, :destroy]
+  before_action :authorise, :only => [:new, :create]
+  before_action :authorise_owner, :only => [:edit, :update, :destroy]
+
 
   def index
-    @found_items = FoundItem.all
+    if @current_user.present?
+      @found_items = FoundItem.all.near(@current_user.address, 20, :units => :km)
+    else
+      @found_items = FoundItem.all
+    end
   end
 
   def new
@@ -24,15 +30,20 @@ class FoundItemsController < ApplicationController
   end
 
   def edit
-    @found_item = FoundItem.find params[:id]
+    # @found_item = FoundItem.find params[:id]
   end
 
   def update
-    found_item = FoundItem.find params[:id]
+    # found_item = FoundItem.find params[:id]
     found_item.update found_item_params
 
     redirect_to found_item_path(found_item.id)
   end
+
+  def destroy
+    @found_item.destroy
+  end
+
 
 private
   def found_item_params
@@ -45,4 +56,10 @@ private
     end
   end
 
+  def authorise_owner
+    @found_item = FoundItem.find params[:id]
+    unless @current_user.present? and @current_user.id == @found_item.user_id
+      flash[:error] = "You can not do that!"
+      redirect_to root_path
+    end
 end

@@ -2,6 +2,7 @@
 
 <p><%= @lost_item.name %></p>
 <p>Description: <%= @lost_item.description %></p>
+<p>Location Lost: <%= @lost_item.address %></p>
 <p><img src=<%=@lost_item.image %> class= "thumbnail"></p>
 <p>Who lost it? <%=link_to(@lost_item.user.name, user_path(@lost_item.user))%></p>
 
