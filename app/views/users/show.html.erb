@@ -4,7 +4,20 @@
 <p>Name: <%= @user.name %></p>
 <p>Email: <%= @user.email %></p>
 <p> <img src=<%=@user.image %> class="thumbnail"></p>
-<p>List of Lost Items</p>
+<p>List of Lost Items: </p>
+<% @user.lost_items.each do |item| %>
+<ul>
+  <li>
+    <%= link_to( item.name, lost_item_path(item) ) %>
+  </li>
+</ul>
+<% end %>
 <p>List of Found Items</p>
-<div>
-<!-- <p>Password digest: <%= @user.password_digest %></p> -->
+<% @user.found_items.each do |item| %>
+<ul>
+  <li>
+    <%= link_to( item.name, found_item_path(item)) %>
+  </li>
+</ul>
+<% end %>
+</div>

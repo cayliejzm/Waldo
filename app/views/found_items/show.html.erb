@@ -2,12 +2,13 @@
 
 <p> <%= @found_item.name %></p>
 <p>Description: <%= @found_item.description %></p>
-
-<p> <img src=<%=@found_item.image %> class= "thumbnail"></p>
-<p>Who found it? <%=@found_item.user %></p>
+<p><img src=<%=@found_item.image %> class= "thumbnail"></p>
+<p>Who found it? <%=link_to(@found_item.user.name, user_path(@found_item.user))%></p>
 
 
 <div class="controls">
+  <% if @current_user.present? %>
   <%= link_to "Edit work", edit_found_item_path( @found_item ) %>
   <%= link_to "Delete work", @found_item, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+  <% end %>
 </div>

@@ -3,10 +3,14 @@
 <p><%= @lost_item.name %></p>
 <p>Description: <%= @lost_item.description %></p>
 <p><img src=<%=@lost_item.image %> class= "thumbnail"></p>
-<p>Who lost it? <%=@lost_item.user %></p>
+<p>Who lost it? <%=link_to(@lost_item.user.name, user_path(@lost_item.user))%></p>
+
 
 
 <div class="controls">
+<% if @current_user.present? %>
   <%= link_to "Edit work", edit_lost_item_path( @lost_item ) %>
   <%= link_to "Delete work", @lost_item, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+<% end %>
+
 </div>

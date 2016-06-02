@@ -1,4 +1,7 @@
 class FoundItemsController < ApplicationController
+
+  before_action :authorise, :only => [:new, :edit, :update, :create, :destroy]
+
   def index
     @found_items = FoundItem.all
   end
@@ -9,18 +12,15 @@ class FoundItemsController < ApplicationController
 
   def create
     @found_item = FoundItem.new
-
     cloudinary = Cloudinary::Uploader.upload( params[:file] )
     @found_item.image = cloudinary["url"]
-    @found_item.save
-
+    @found_item = FoundItem.save
     @current_user.found_items << @found_item
-
-    redirect_to "/found_item/#{found_item.id}"
+    # redirect_to "/found_item/#{found_item.id}"
   end
 
   def show
-      @found_item = FoundItem.find params[:id]
+    @found_item = FoundItem.find params[:id]
   end
 
   def edit
@@ -31,6 +31,18 @@ class FoundItemsController < ApplicationController
     found_item = FoundItem.find params[:id]
     found_item.update found_item_params
 
-    redirect_to "/found_item/#{found_item.id}"
+    redirect_to found_item_path(found_item.id)
   end
+
+private
+  def found_item_params
+    params.require(:found_item).permit(:name, :description, :image, :time_and_date_found, :longitude, :latitude)
+  end
+  def authorise
+    unless @current_user.present?
+      flash[:error] = "You need to be logged in for that!"
+      redirect_to root_path
+    end
+  end
+
 end
