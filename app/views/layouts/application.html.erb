@@ -12,7 +12,7 @@
 <body>
 
 
-  <ul>
+
 
     <%if @current_user.present? %>
     <%link_to "Edit Your Profile", edit_user_path(@current_user.id) %>
@@ -23,38 +23,43 @@
       </li>
       <% end %>
 
-    <li>
+    <p class="userinfo">
       You are logged in as <%= @current_user.name%> and your ID# is <%= @current_user.id %>
-    </li>
+    </p>
+
+    <div class="container">
 <nav class= "TopNav">
-    <li class= "TopNav"><%= link_to "Home Page", root_path %></li>
-    <li class= "TopNav">
+    <ul>
+    <li class= "link"><%= link_to "Home Page", root_path %></li>
+      <li class= "link">
+        <%=link_to "Items Lost", lost_items_path %>
+      </li>
+      <li class= "link">
+        <%= link_to "Items Found", found_items_path %>
+    </li>
+    <li class="link">
       <%= link_to "View Your Profile", user_path(@current_user.id)%>
     </li>
-    <li class= "TopNav">
+
+    <li class= "link">
       <%=link_to "Edit Your Profile", edit_user_path(@current_user.id) %>
     </li>
-    <li class= "TopNav">
-      <%=link_to "Items Lost", lost_items_path %>
-    </li>
-    <li class= "TopNav">
-      <%= link_to "Items Found", found_items_path %>
-    </li>
-    <li class= "TopNav">
+
+    <li class= "link">
       <%= link_to "Log out", logout_path, :method => :delete %>
     </li>
-  
+
     <% else %>
-  <li class= "TopNav">
+  <li class= "link">
     <%= link_to "Sign Up", new_user_path %>
   </li>
-  <li class= "TopNav">
+  <li class= "link">
     <%= link_to "Log In", login_path %>
   </li>
     <% end %>
   </ul>
 </nav>
-
+</div>
 
 <!-- <% if flash[:error].present? %>
     <h2 class="error">

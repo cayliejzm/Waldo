@@ -1,0 +1,175 @@
+@font-face {
+   url: ('https://fonts.googleapis.com/css?family=Raleway')
+ }
+
+body {
+   font-family: "railway", sans-serif;
+   font-size: 13px;
+   text-align: center;
+   font-weight: lighter;
+   letter-spacing: 1px;
+
+}
+.linebreak {
+  color: black;
+  margin-left: 100px;
+  margin-right: 100px;
+  size: 10px;
+}
+.userinfo {
+  padding-top: 20px;
+}
+
+ header {
+   font-size: 40px;
+   color; white;
+   width:100%;
+   height:50px;
+   background-color; black;
+   margin: 0 auto 20px;
+   position:relative;
+   padding:20px 0 0;
+   border-bottom:10px solid black;/*not visable in viewer*/
+ }
+.container {
+  width: 100%;
+  margin:0 auto;
+  text-align: center;
+
+}
+ .TopNav {
+   display:inline-block;
+   font-size:13px;
+   padding: 21px 0 0;
+   letter-spacing: 3px;
+   color: white;
+   font-family: 'railway', sans-serif;
+   text-transform: uppercase;
+ }
+
+ h1{
+  color: black;
+  font-weight: lighter; 300;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 20px;
+  font-size: 50px;
+  letter-spacing: 5px;
+ }
+
+.important {
+  color: #266d75;
+}
+  h2, h3 {
+  color: #black;
+   font-weight: light;
+   letter-spacing: 2.5px;
+   margin-left: 0px;
+   /*text-align: center;*/
+   font-size: 15px;
+ }
+
+ div {
+   margin-left: 20px
+   font-family: "railways", sans-serif;
+   font-weight: light 300;
+   /*text-align: center;*/
+   font-size: 15px;
+   /*display: inline-block;*/
+ }
+
+ #main {
+   width: 800px;
+   margin: 0 auto;
+   display: flex;
+ }
+ #column1    {
+   width: 400px;
+   height: 400px;
+   margin: auto;
+   float: left;
+ }
+
+ #column2  {
+   width: 400px;
+   height: 400px;
+   margin: auto;
+ }
+
+
+
+ p {
+   font-weight: light 300;
+ }
+
+ ul {
+
+   font-weight: lighter;
+   font-size: 15px;
+   padding-left: 0px;
+ }
+
+ li {
+   font-weight: lighter;
+   font-size: 15px;
+   list-style-type: none;
+   padding: 0;
+ }
+
+
+ ul.TopNav {
+    overflow: auto;
+   font-weight: light 300;
+   /*text-align: center;*/
+   font-size: 10px;
+   margin-left: 20px;
+   list-style: none;
+   display: inline-block;
+ }
+
+.link {
+  float: left;
+   font-weight: light 300;
+   text-align: center;
+   font-size: 10px;
+   margin-left: 65px;
+   display: inline-block;
+ }
+
+ .Profile {
+   align-items: center;
+   text-align: center;
+   font-weight: lighter;
+   font-size: 15px;
+   margin-left: 20px;
+   /*margin-right: 20px;*/
+   padding-right: 20px;
+ }
+
+ div {
+
+   font-family:  "railway", sans-serif;
+   font-weight: lighter; 300;
+   /*text-align: center;*/
+   font-size: 15px
+
+ }
+
+ div.SmallHeading {
+   font-weight: normal;
+   letter-spacing: 5px;
+   text-align: center;
+   font-size: 25px;
+   padding: 70px;
+   padding-bottom: 0px;
+ }
+
+
+ .thumbnail {
+   max-width: 200px;
+ }
+
+ .featured {
+   max-width: 80%;
+ }

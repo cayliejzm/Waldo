@@ -20,4 +20,8 @@
   </li>
 </ul>
 <% end %>
+
+
+<p><p><%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{@current_user.latitude},#{@current_user.longitude}" %></p>
+
 </div>
