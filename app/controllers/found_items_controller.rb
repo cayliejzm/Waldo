@@ -62,4 +62,5 @@ private
       flash[:error] = "You can not do that!"
       redirect_to root_path
     end
+  end
 end
