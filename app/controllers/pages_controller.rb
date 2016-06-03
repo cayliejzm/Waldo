@@ -9,4 +9,5 @@ class PagesController < ApplicationController
       @lost_items = LostItem.all
     end
   end
+  
 end

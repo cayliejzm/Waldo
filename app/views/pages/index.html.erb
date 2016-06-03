@@ -1,21 +1,25 @@
 <h1>LostCat</h1>
 
-<p>Currently showing items within a 20km radius of <span class="important"><%=@current_user.address %> </span> </p>
+<% if @current_user.present?%>
+<p>Currently showing items within a 20km radius of <span class="important">
+  <%=@current_user.address %> </span> </p>
+<% end %>
 
 <div id="main">
+
 <div id="column1">
-<h3>Lost Items in your area</H3>
-    <% @lost_items.each do |l| %>
-      <ul>
-        <li>
-          <%= link_to l.name, lost_item_path(l) %>
-        </li>
-      </ul>
-    <%end%>
+<h3>Lost Items</H3>
+  <% @lost_items.each do |l| %>
+    <ul>
+      <li>
+        <%= link_to l.name, lost_item_path(l) %>
+      </li>
+    </ul>
+  <%end%>
 </div>
 
 <div id="column2">
-<h3>Found Items in your area</h3>
+<h3>Found Items</h3>
 <% @found_items.each do |f| %>
   <ul>
     <li>
@@ -24,7 +28,5 @@
   </ul>
   <% end %>
 </div>
-
-
 
 </div>

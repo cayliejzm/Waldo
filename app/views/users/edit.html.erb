@@ -1,19 +1,27 @@
 <div class="SmallHeading">Update User "<%=@current_user.name%>"</div>
 
 <%= form_for @user do |f| %>
+
 <p>
   <%= f.label :name  %>
   <%= f.text_field :name %>
 </p>
+
 <p>
-   <%= f.label :email  %>
-   <%= f.email_field :email %>
+  <%= f.label :email  %>
+  <%= f.email_field :email %>
 </p>
 
 <p>
-   <%= f.label :image  %>
-   <%= f.url_field :image %>
+  <%= f.label :image  %>
+  <%= f.url_field :image %>
 </p>
+
+<p>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+</p>
+
 
 <%= f.submit "Update User" %>
 <% end %>

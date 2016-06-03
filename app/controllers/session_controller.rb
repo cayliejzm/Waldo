@@ -6,7 +6,6 @@ class SessionController < ApplicationController
 
   def create
     user = User.find_by :email => params[:email]
-
       if user.present? && user.authenticate( params[:password] )
         flash[:found_user] = "You've successfully logged in"
         session[:user_id] = user.id
@@ -29,5 +28,4 @@ private
   def authenticate_user
     redirect_to users_path if @current_user.present?
   end
-
 end

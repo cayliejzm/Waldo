@@ -1,5 +1,7 @@
 <div class="SmallHeading">Lost Items in Your Area</div>
+
 <br>
+
 <hr class= "linebreak">
 <% @lost_items.each do |l| %>
   <ul>
@@ -8,11 +10,9 @@
     <li><%=l.description%></li>
     <br>
     <li><img src= "<%=l.image %>" class= "thumbnail"></li>
-    <!-- <li>Location Lost: =#l.longitude, l.latitude /li> -->
   </ul>
 <hr class= "linebreak">
 <% end %>
-
 
 <p>
 <%= link_to "Add Item Lost", new_lost_item_path%>

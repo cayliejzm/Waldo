@@ -12,29 +12,30 @@ jeannette = User.create :name => 'Jeannette', :email => 'jeannette@ga.co', :pass
 
 julius = User.create :name => 'Julius', :email => 'julius@ga.co', :password => 'chicken', :password_confirmation => 'chicken', :address => '80 Pyrmont Street, Pyrmont 2009 Australia', :image => 'https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xfa1/v/t1.0-9/255751_131178370296094_5121854_n.jpg?oh=e927a6c3210d57b281e021669da5dabe&oe=57CA98E0&__gda__=1474217000_3768fd67314144f335c9407f88475bd6'
 
-jess = User.create :name => 'Jess', email => 'jess@ga.co', :password => 'chicken', :password_confirmation => 'chicken', :address => '222 Australia St, Newtown NSW, Australia', :image => 'https://scontent-syd1-1.xx.fbcdn.net/v/t1.0-9/12512781_10154067784576085_1771909795757044222_n.jpg?oh=5d5eb3ec678a05efa5c50126d5fd806c&oe=57D16D7B'
+jess = User.create :name => 'Jess', :email => 'jess@ga.co', :password => 'chicken', :password_confirmation => 'chicken', :address => '222 Australia St, Newtown NSW, Australia', :image => 'https://scontent-syd1-1.xx.fbcdn.net/v/t1.0-9/12512781_10154067784576085_1771909795757044222_n.jpg?oh=5d5eb3ec678a05efa5c50126d5fd806c&oe=57D16D7B'
 
 FoundItem.destroy_all
 
-ring = FoundItem.create :name => 'Engagement Ring', :description => 'Big shiny JLo Rock', :time_date_found => 'May 29th, 2016 at 3:45pm', :address => "Sydney Opera House", :image => 'https://mylostbox.com/wp-content/uploads/2016/01/Engagement-Ring.jpg'
+ring = FoundItem.create :name => 'Engagement Ring', :description => 'Big shiny JLo Rock', :time_date_lost => 'May 29th, 2016 at 3:45pm', :address => "Sydney Opera House", :image => 'https://mylostbox.com/wp-content/uploads/2016/01/Engagement-Ring.jpg'
 
-jacket = FoundItem.create :name => 'Acne Leather Jacket', :description => 'Olive Green moto leather jacket', :time_date_found => 'May 30, 2016 at 12am', :address => 'Hyde Park', :image => 'https://s-media-cache-ak0.pinimg.com/236x/d9/a2/34/d9a234b55f6c7d3011dbdba4082f7902.jpg'
+jacket = FoundItem.create :name => 'Acne Leather Jacket', :description => 'Olive Green moto leather jacket', :time_date_lost => 'May 30, 2016 at 12am', :address => '625 Park Ave, Laguna Beach, CA 92651, United States', :image => 'https://s-media-cache-ak0.pinimg.com/236x/d9/a2/34/d9a234b55f6c7d3011dbdba4082f7902.jpg'
 
-pig = FoundItem.create :name => 'Baby Piggy', :description => 'Cute little baby pink pig, about 1 month old', :time_date_found => 'June 2, 2016 at 8am', :address => 'Sydney Harbour Bridge', :image => 'http://www.fuzzfeed.com/wp-content/uploads/2015/06/IMG_0084.jpg'
+pig = FoundItem.create :name => 'Baby Piggy', :description => 'Cute little baby pink pig, about 1 month old', :time_date_lost => 'June 2, 2016 at 8am', :address => 'Sydney Harbour Bridge', :image => 'http://www.fuzzfeed.com/wp-content/uploads/2015/06/IMG_0084.jpg'
 
-doggy = FoundItem.create :name => 'Spotty Pup', :description => 'Apparent dalmation, spotty, looks about 1 year old', :time_date_found => 'May 29, 2016 at 2pm', :address => 'Sydney Botanical Gardens', :image => 'http://www.burkesbackyard.com.au/wp-content/uploads/2013/09/Dalmatian-Dog.jpg'
+doggy = FoundItem.create :name => 'Spotty Pup', :description => 'Apparent dalmation, spotty, looks about 1 year old', :time_date_lost => 'May 29, 2016 at 2pm', :address => 'Sydney Botanical Gardens', :image => 'http://www.burkesbackyard.com.au/wp-content/uploads/2013/09/Dalmatian-Dog.jpg'
 
 
-skateboard = FoundItem.create :name => 'Long Skateboard', :description => 'Found a long, professional looking board meant for a hooligan', :time_date_found => 'May 25, 2016 at 11am', :address => 'Bondi Beach, Australia', :image => 'http://cdn.shopify.com/s/files/1/0493/4457/products/minnow-complete-cruiser-side-green-slide_1024x1024.png?v=1429813431'
+skateboard = FoundItem.create :name => 'Long Skateboard', :description => 'Found a long, professional looking board meant for a hooligan', :time_date_lost => 'May 25, 2016 at 11am', :address => 'Bondi Beach, Australia', :image => 'http://cdn.shopify.com/s/files/1/0493/4457/products/minnow-complete-cruiser-side-green-slide_1024x1024.png?v=1429813431'
 
-computer = FoundItem.create :name => 'MacBook Air', :description => 'Found a brand new MacBook Air, still in the box and bag with no reciepts.', :time_date_found => 'May 20, 2016 at 10:30am', :address => 'Apple Store, 367 George St, Sydney NSW 2000', :image => 'http://cdn1.macworld.co.uk/cmsdata/features/3605337/MacbookAir11_lifestyle_15_thumb800.jpg'
+computer = FoundItem.create :name => 'MacBook Air', :description => 'Found a brand new MacBook Air, still in the box and bag with no reciepts.', :time_date_lost => 'May 20, 2016 at 10:30am', :address => 'Apple Store, 367 George St, Sydney NSW 2000', :image => 'http://cdn1.macworld.co.uk/cmsdata/features/3605337/MacbookAir11_lifestyle_15_thumb800.jpg'
 
-hairpin = FoundItem.create :name => 'One single Bobbi Pin', :description => 'Bobbi pin for your hair. Brown. Slightly worn.', :time_date_found => 'May 26, 2016 at 7pm', :address => '75-77 Pitt St, Sydney NSW 2000', :image => 'http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=57944565'
+hairpin = FoundItem.create :name => 'One single Bobbi Pin', :description => 'Bobbi pin for your hair. Brown. Slightly worn.', :time_date_lost => 'May 26, 2016 at 7pm', :address => '75-77 Pitt St, Sydney NSW 2000', :image => 'http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=57944565'
 
-egg = FoundItem.create :name => 'Ostrich Egg', :description => 'Large egg belonging to a big, strange and terrifying bird.', :time_date_found => 'May 10, 2016 at 3:30pm', :address => 'Newington Armory, 1 Jamieson Street, Sydney Olympic Park NSW 2127', :image => 'http://media1.fdncms.com/chicago/imager/key-ingredient-ostrich-egg/u/magnum/4331683/key-ingredient-007_magnum.jpg'
+egg = FoundItem.create :name => 'Ostrich Egg', :description => 'Large egg belonging to a big, strange and terrifying bird.', :time_date_lost => 'May 10, 2016 at 3:30pm', :address => 'Newington Armory, 1 Jamieson Street, Sydney Olympic Park NSW 2127', :image => 'http://media1.fdncms.com/chicago/imager/key-ingredient-ostrich-egg/u/magnum/4331683/key-ingredient-007_magnum.jpg'
 
-water = FoundItem.create :name => 'Water Bottle', :description => 'medium sized plastic bottle of water, half-full.', :time_date_found => 'April 10th, 2016 at 2am', :address => '458 Harris St, Sydney NSW 2007', :image => 'http://www.ecouterre.com/wp-content/uploads/2013/08/water-bottle-537x402.jpg'
+water = FoundItem.create :name => 'Water Bottle', :description => 'medium sized plastic bottle of water, half-full.', :time_date_lost => 'April 10th, 2016 at 2am', :address => '458 Harris St, Sydney NSW 2007', :image => 'http://www.ecouterre.com/wp-content/uploads/2013/08/water-bottle-537x402.jpg'
 
+smarts = FoundItem.create :name => 'Smarts', :description => 'Lost her soul but she found the brains.', :time_date_lost => 'June 3 2016, at 5am', :address => '56-58 York Street, Level M, Sydney NSW 2000', :image => 'http://smartrecoveryaustralia.com.au/wp-content/uploads/2016/02/addiction-is-not-a-disease.png'
 
 LostItem.destroy_all
 
@@ -66,10 +67,12 @@ shannon.lost_items << dawg << giraffe
 shannon.found_items << hairpin << egg
 stian.lost_items << baby
 stian.found_items << doggy << computer
-jeannette.lost_items << yellowcar
-jeannette.found_items << ring2 << pig
-julius.found_items << skateboard << masonjar << water
-
+jeannette.lost_items << yellowcar << ring2
+jeannette.found_items << pig
+julius.found_items << skateboard << water
+julius.lost_items << masonjar
+jess.lost_items << soul
+jess.found_items << smarts
 
 
 #rake db:seed

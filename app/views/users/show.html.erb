@@ -1,10 +1,14 @@
-<div class="SmallHeading">Your Profile</div>
+<div class="SmallHeading"><%=@user.name%>'s Profile</div>
 
 <div class="Profile">
 <p>Name: <%= @user.name %></p>
-<p>Email: <%= @user.email %></p>
+
+<p>Email: <%=mail_to(@user.email) %></p>
+
 <p> <img src=<%=@user.image %> class="thumbnail"></p>
-<p>List of Lost Items: </p>
+
+<p><%=@user.name%>'s Lost Items: </p>
+
 <% @user.lost_items.each do |item| %>
 <ul>
   <li>
@@ -12,7 +16,9 @@
   </li>
 </ul>
 <% end %>
-<p>List of Found Items</p>
+
+<p> <%=@user.name%>'s Found Items</p>
+
 <% @user.found_items.each do |item| %>
 <ul>
   <li>
@@ -21,7 +27,8 @@
 </ul>
 <% end %>
 
-
-<p><p><%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{@current_user.latitude},#{@current_user.longitude}" %></p>
+<p>
+  <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{@current_user.latitude},#{@current_user.longitude}" %>
+</p>
 
 </div>

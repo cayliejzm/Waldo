@@ -36,7 +36,6 @@ class FoundItemsController < ApplicationController
   def update
     # found_item = FoundItem.find params[:id]
     found_item.update found_item_params
-
     redirect_to found_item_path(found_item.id)
   end
 
@@ -49,6 +48,7 @@ private
   def found_item_params
     params.require(:found_item).permit(:name, :description, :image, :time_and_date_found, :longitude, :latitude, :address)
   end
+
   def authorise
     unless @current_user.present?
       flash[:error] = "You need to be logged in for that!"
@@ -63,4 +63,5 @@ private
       redirect_to root_path
     end
   end
+
 end

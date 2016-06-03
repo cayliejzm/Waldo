@@ -6,6 +6,7 @@
   <%= f.label :name %>
   <%= f.text_field :name, :required => true %>
 </p>
+
 <p>
   <%= f.label :description %>
   <%= f.text_field :description, :required => true %>
@@ -14,26 +15,8 @@
 <p>
   <%= f.label :image %>
   <%= f.url_field :image, :required => true %>
-  <!-- above will eventually become cloudinary -->
 </p>
 
 <%= f.submit %>
 
 <% end %>
-
-<!--
-class CreateFoundItems < ActiveRecord::Migration
-  def change
-    create_table :found_items do |t|
-      t.text :name
-      t.text :description
-      t.text :image
-      t.text :time_date_lost
-      t.float :longitude
-      t.float :latitude
-
-
-      t.timestamps null: false
-    end
-  end
-end -->

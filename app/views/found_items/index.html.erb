@@ -3,9 +3,9 @@
 <hr class= "linebreak">
 <% @found_items.each do |f| %>
   <ul>
-    <li>Name: <%= link_to f.name, found_item_path(f) %></li>
+    <li><%= link_to f.name, found_item_path(f) %></li>
     <br>
-    <li>Description: <%=f.description%></li>
+    <li><%=f.description%></li>
     <br>
     <li><img src= "<%=f.image %>" class= "thumbnail"></li>
   </ul>
